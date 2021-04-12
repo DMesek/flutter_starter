@@ -11,14 +11,56 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-
   cupertino_icons: ^1.0.2
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
-  flutter_flavorizr: ^1.0.11
+  flutter_flavorizr: 1.0.11
 
 flutter:
-
   uses-material-design: true
+
+flavorizr:
+  app:
+    android:
+      flavorDimensions: "app"
+    ios:
+
+  flavors:
+    dev:
+      app:
+        name: "${APP_NAME} Dev"
+      android:
+        applicationId: "${ID_DEV}"
+        firebase:
+          config: ".firebase/android/dummy_file.json"
+
+      ios:
+        bundleId: "${ID_DEV}"
+        firebase:
+          config: ".firebase/ios/GoogleService-Info.plist"
+
+    staging:
+      app:
+        name: "${APP_NAME} Staging"
+      android:
+        applicationId: "${ID_STAGING}"
+        firebase:
+          config: ".firebase/android/dummy_file.json"
+      ios:
+        bundleId: "${ID_STAGING}"
+        firebase:
+          config: ".firebase/ios/GoogleService-Info.plist"
+
+    prod:
+      app:
+        name: "${APP_NAME}"
+      android:
+        applicationId: "${ID_PROD}"
+        firebase:
+          config: ".firebase/android/dummy_file.json"
+      ios:
+        bundleId: "${ID_PROD}"
+        firebase:
+          config: ".firebase/ios/GoogleService-Info.plist"

@@ -4,16 +4,18 @@ import 'package:q_flutter_starter/main/app_environment.dart';
 Future<void> mainCommon(AppEnvironment environment) async {
   WidgetsFlutterBinding.ensureInitialized();
   EnvInfo.initialize(environment);
-  runApp(MyApp());
+  runApp(MyApp(environment));
 }
 
 class MyApp extends StatelessWidget {
-  const MyApp();
+  final AppEnvironment environment;
+  const MyApp(this.environment);
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
+      debugShowCheckedModeBanner: environment != AppEnvironment.PROD,
+      title: EnvInfo.appName,
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),

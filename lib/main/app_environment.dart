@@ -15,9 +15,9 @@ abstract class EnvInfo {
 
 extension _EnvProperties on AppEnvironment {
   static const _appTitles = {
-    AppEnvironment.DEV: 'APP_NAME_DEV',
-    AppEnvironment.PROD: 'APP_NAME_PROD',
-    AppEnvironment.STAGING: 'APP_NAME_STAGING',
+    AppEnvironment.DEV: 'APP_NAME Dev',
+    AppEnvironment.PROD: 'APP_NAME Prod',
+    AppEnvironment.STAGING: 'APP_NAME Staging',
   };
 
   static const _envs = {
@@ -26,6 +26,7 @@ extension _EnvProperties on AppEnvironment {
     AppEnvironment.STAGING: 'staging',
   };
 
+  //TODO: replace placeholders with real URLs
   static const _apiBaseUrls = {
     AppEnvironment.DEV: 'API_BASE_DEV',
     AppEnvironment.PROD: 'API_BASE_PROD',
