@@ -34,7 +34,7 @@ flavorizr:
       android:
         applicationId: "${ID_DEV}"
         firebase:
-          config: ".firebase/android/dummy_file.json"
+          config: ".firebase/android/google-services.json"
 
       ios:
         bundleId: "${ID_DEV}"
@@ -47,7 +47,7 @@ flavorizr:
       android:
         applicationId: "${ID_STAGING}"
         firebase:
-          config: ".firebase/android/dummy_file.json"
+          config: ".firebase/android/google-services.json"
       ios:
         bundleId: "${ID_STAGING}"
         firebase:
@@ -59,7 +59,7 @@ flavorizr:
       android:
         applicationId: "${ID_PROD}"
         firebase:
-          config: ".firebase/android/dummy_file.json"
+          config: ".firebase/android/google-services.json"
       ios:
         bundleId: "${ID_PROD}"
         firebase:

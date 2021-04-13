@@ -10,9 +10,9 @@ rm pubspec.yaml
 mv scripts/tmp.yaml pubspec.yaml
 
 flutter pub get
-flutter pub run flutter_flavorizr -p android:buildGradle,android:androidManifest,android:dummyAssets,google:firebase,ios:xcconfig,ios:buildTargets,ios:schema,ios:dummyAssets,ios:plist
-# rm lib/app.dart lib/flavors.dart lib/main-dev.dart lib/main-staging.dart lib/main-prod.dart
-# rm -r lib/pages
+flutter pub run flutter_flavorizr
+rm lib/app.dart lib/flavors.dart lib/main-dev.dart lib/main-staging.dart lib/main-prod.dart
+rm -r lib/pages
 
 cat lib/main/app_environment.dart | sed "s/APP_NAME/$appName/g" > tmp.dart
 rm lib/main/app_environment.dart && mv tmp.dart lib/main/app_environment.dart

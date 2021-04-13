@@ -13,4 +13,7 @@ alias gitrb="git rebase --interactive development"
 # Flutter run aliases
 alias rundev="flutter run --flavor dev"
 alias runstag="flutter run --flavor staging"
-alias runstag="flutter run --flavor prod"
+alias runprod="flutter run --flavor prod"
+
+#Flutter flavorizr aliases
+alias refreshfb="flutter pub run flutter_flavorizr -p google:firebase"
