@@ -36,6 +36,8 @@ if [[ -z "$matches" ]]; then
   echo "Please check the name of your google-services.json file" && exit 1
 fi
 
+mkdir .firebase
+mkdir .firebase/{android,ios}
 cp "$infoPlistLocation" .firebase/ios
 cp "$googleServicesLocation" .firebase/android
 
