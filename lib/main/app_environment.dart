@@ -1,3 +1,4 @@
+// ignore_for_file: constant_identifier_names, use_setters_to_change_properties, avoid_classes_with_only_static_members
 enum AppEnvironment { DEV, PROD, STAGING }
 
 abstract class EnvInfo {
@@ -11,6 +12,7 @@ abstract class EnvInfo {
   static String get envName => _environment._envName;
   static String get assetBaseUrl => _environment._assetBaseUrl;
   static String get apiBaseUrl => _environment._apiBaseUrl;
+  static AppEnvironment get environment => _environment;
 }
 
 extension _EnvProperties on AppEnvironment {

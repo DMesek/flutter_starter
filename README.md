@@ -21,7 +21,7 @@ Before running the initialization script, you must install the following softwar
 * Add a new iOS app and provide the bundle id which will be used for this app
 * Download the GoogleService-Info.plist file
 
-## Run the script
+## Initialize the project
 
 In order to initialize the project you must run the scripts/init_project bash script while inside the q_flutter_started folder.
 
@@ -41,4 +41,40 @@ Usage example:
 ```
 cd q_flutter_starter
 bash scripts/init_project.sh -n "My Little App" -p "com.example.mylittleapp" -i ~/Downloads/mylittleapp GoogleService-Info.plist -a ~/Downloads/mylittleapp/google-services.json
+```
+
+## Features
+
+Easily add new environmental variables to the project, check your (weighted) test coverage etc.
+
+### Adding environmental variables
+
+Just modify the main/app_environment.dart file to suit your needs. Add your custom properties to the _EnvProperties extension, and create the corresponding static getter in EnvInfo.
+
+Example:
+
+```
+abstract class EnvInfo {
+  ...
+  static String get myCustomProperty => _environment._myCustomProperty;
+}
+
+extension _EnvProperties on AppEnvironment {
+  ..
+  static const _myCustomProperties = {
+    AppEnvironment.DEV: 'PROPERTY_DEV',
+    AppEnvironment.PROD: 'PROPERT_PROD',
+    AppEnvironment.STAGING: 'PROPERTY_STAGING',
+  };
+  
+  ...
+  String get _myCustomProperty => _myCustomProperties[this]!;
+}
+
+```
+
+Now you can easily access the created property anywhere in your code by calling:
+
+```
+final myProperty = EnvInfo.myCustomProperty
 ```

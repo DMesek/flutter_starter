@@ -43,5 +43,13 @@ cp "$googleServicesLocation" .firebase/android
 
 bash scripts/rename_project.sh "$appName" && bash scripts/setup_flavors.sh "$appName" "$packageName"
 if [[ "$?" == "0" ]]; then
+  bash scripts/cleanup.sh
+  flutter pub upgrade --major-versions
+  cd ios && pod repo update && cd ..
+  echo "Don't forget to setup the signing for ios"
   echo "All done :)"
+  rm -r scripts
+  xed ios
 fi
+
+

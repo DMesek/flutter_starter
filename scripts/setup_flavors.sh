@@ -10,6 +10,14 @@ rm pubspec.yaml
 mv scripts/tmp.yaml pubspec.yaml
 
 flutter pub get
+if [[ "$?" != "0" ]]; then
+    git reset --hard
+    git clean -fd
+    currentDir=`pwd`
+    cd .. && mv $currentDir "q_flutter_starter"
+    echo "Please upgrade to the latest flutter/dart sdk" && exit 1
+fi
+
 flutter pub run flutter_flavorizr
 rm lib/app.dart lib/flavors.dart lib/main-dev.dart lib/main-staging.dart lib/main-prod.dart
 rm -r lib/pages

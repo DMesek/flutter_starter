@@ -1,0 +1,21 @@
+include: package:lint/analysis_options.yaml
+
+analyzer:
+  strong-mode:
+    implicit-casts: true
+    implicit-dynamic: true
+
+  errors:
+    parameter_assignments: error
+    dead_code: error
+    close_sinks: error
+    
+  exclude:
+    - "**/*.g.dart"
+    - "**/*.freezed.dart"
+    - "**/*.config.dart"
+    - "**/generated/*"
+
+linter:
+  rules:
+    sort_pub_dependencies: false
