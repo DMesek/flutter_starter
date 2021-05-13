@@ -41,12 +41,12 @@ flavorizr:
       android:
         applicationId: "${ID_DEV}"
         firebase:
-          config: ".firebase/android/google-services.json"
+          config: ".firebase/android/dev/google-services.json"
 
       ios:
         bundleId: "${ID_DEV}"
         firebase:
-          config: ".firebase/ios/GoogleService-Info.plist"
+          config: ".firebase/ios/dev/GoogleService-Info.plist"
 
     staging:
       app:
@@ -54,11 +54,11 @@ flavorizr:
       android:
         applicationId: "${ID_STAGING}"
         firebase:
-          config: ".firebase/android/google-services.json"
+          config: ".firebase/android/staging/google-services.json"
       ios:
         bundleId: "${ID_STAGING}"
         firebase:
-          config: ".firebase/ios/GoogleService-Info.plist"
+          config: ".firebase/ios/staging/GoogleService-Info.plist"
 
     prod:
       app:
@@ -66,8 +66,8 @@ flavorizr:
       android:
         applicationId: "${ID_PROD}"
         firebase:
-          config: ".firebase/android/google-services.json"
+          config: ".firebase/android/prod/google-services.json"
       ios:
         bundleId: "${ID_PROD}"
         firebase:
-          config: ".firebase/ios/GoogleService-Info.plist"
+          config: ".firebase/ios/prod/GoogleService-Info.plist"

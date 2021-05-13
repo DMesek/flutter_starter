@@ -29,18 +29,22 @@ In order to initialize the project you must run the scripts/init_project bash sc
 
 Here is the list of required paremeters:
 
-* n - project name
-* p - package name 
-* i - path to the GoogleService-Info.plist file
-* a - path to the google-services.json file
+* starterLocation - location of the q_flutter_starter on your device
+* appName - project name
+* package - package name for your app
+* infoPlistProd - path to the GoogleService-Info.plist prod file
+* googleServicesProd - path to the google-services.json prod file
+* infoPlistDev - path to the GoogleService-Info.plist dev file
+* googleServicesDev - path to the google-services.json dev file
+* infoPlistStaging- path to the GoogleService-Info.plist staging file
+* googleServicesStaging - path to the google-services.json staging file
 
 ### Example
 
 Usage example:
 
 ```
-cd q_flutter_starter
-bash scripts/init_project.sh -n "My Little App" -p "com.example.mylittleapp" -i ~/Downloads/mylittleapp GoogleService-Info.plist -a ~/Downloads/mylittleapp/google-services.json
+bash scripts/init_project.sh --starterLocation ~/Downloads/q_flutter_starter --appName "My Little App" --package "com.example.mylittleapp" --infoPlistProd ~/Downloads/mylittleapp/prod/GoogleService-Info.plist --googleServicesProd ~/Downloads/mylittleapp/prod/google-services.json --infoPlistStaging ~/Downloads/mylittleapp/staging/GoogleService-Info.plist --googleServicesStaging ~/Downloads/mylittleapp/staging/google-services.json --infoPlistDev ~/Downloads/mylittleapp/dev/GoogleService-Info.plist --googleServicesDev ~/Downloads/mylittleapp/dev/google-services.json
 ```
 
 ## Features

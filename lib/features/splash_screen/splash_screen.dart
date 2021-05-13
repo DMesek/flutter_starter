@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:my_little_app/main/app_environment.dart';
+import '../../main/app_environment.dart';
 
 class SplashScreen extends StatefulWidget {
   static const routeName = '/';
