@@ -36,10 +36,10 @@ if [[ "$?" == "0" ]]; then
   bash scripts/cleanup.sh
   flutter pub upgrade --major-versions
   cd ios && pod repo update && cd ..
+  bash scripts/configure_firebase.sh
   echo "Don't forget to setup the signing for ios"
   echo "All done :)"
   rm -r scripts
-  xed ios
 fi
 
 
