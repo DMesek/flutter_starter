@@ -32,7 +32,9 @@ Here is the list of required paremeters:
 
 * starterLocation - location of the q_flutter_starter on your device
 * appName - project name
-* package - package name for your app
+* package - package name for your production app
+* packageDev - package name for your dev app
+* packageStaging - package name for your staging app
 * infoPlistProd - path to the GoogleService-Info.plist prod file
 * googleServicesProd - path to the google-services.json prod file
 * infoPlistDev - path to the GoogleService-Info.plist dev file
@@ -41,12 +43,13 @@ Here is the list of required paremeters:
 * googleServicesStaging - path to the google-services.json staging file
 * remoteSSH - SSH link to project git repository
 
+
 ### Example
 
 Usage example:
 
 ```
-bash scripts/init_project.sh --starterLocation ~/Downloads/q_flutter_starter --appName "My Little App" --package "com.example.mylittleapp" --infoPlistProd ~/Downloads/mylittleapp/prod/GoogleService-Info.plist --googleServicesProd ~/Downloads/mylittleapp/prod/google-services.json --infoPlistStaging ~/Downloads/mylittleapp/staging/GoogleService-Info.plist --googleServicesStaging ~/Downloads/mylittleapp/staging/google-services.json --infoPlistDev ~/Downloads/mylittleapp/dev/GoogleService-Info.plist --googleServicesDev ~/Downloads/mylittleapp/dev/google-services.json --remoteSSH git@gitlab.q-software.com:mobile/flutter_packages/q_flutter_starter.git
+bash scripts/init_project.sh --starterLocation ~/Downloads/q_flutter_starter --appName "My Little App" --package "com.example.mylittleapp" --packageDev "com.example.mylittleapp.dev" --packageStaging "com.example.mylittleapp.staging" --infoPlistProd ~/Downloads/mylittleapp/prod/GoogleService-Info.plist --googleServicesProd ~/Downloads/mylittleapp/prod/google-services.json --infoPlistStaging ~/Downloads/mylittleapp/staging/GoogleService-Info.plist --googleServicesStaging ~/Downloads/mylittleapp/staging/google-services.json --infoPlistDev ~/Downloads/mylittleapp/dev/GoogleService-Info.plist --googleServicesDev ~/Downloads/mylittleapp/dev/google-services.json --remoteSSH git@gitlab.q-software.com:mobile/flutter_packages/q_flutter_starter.git
 ```
 
 ## Features

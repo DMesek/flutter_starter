@@ -15,7 +15,13 @@ if [ -z "$appName" ]; then
   echo "Please provide the app name using the -n option" && exit 1
 fi
 if [ -z "$package" ]; then
-  echo "Please provide the project package name/bundle id using the -p option" && exit 1
+  echo "Please provide the project prod package name/bundle id using the --package option" && exit 1
+fi
+if [ -z "$packageDev" ]; then
+  echo "Please provide the project dev package name/bundle id using the --packageDev option" && exit 1
+fi
+if [ -z "$packageStaging" ]; then
+  echo "Please provide the project staging package name/bundle id using the --packageStaging option" && exit 1
 fi
 
 cd $starterLocation
@@ -31,7 +37,7 @@ cp "$googleServicesDev" .firebase/android/dev
 cp "$infoPlistStaging" .firebase/ios/staging
 cp "$googleServicesStaging" .firebase/android/staging
 
-bash scripts/rename_project.sh "$appName" && bash scripts/setup_flavors.sh "$appName" "$package"
+bash scripts/rename_project.sh "$appName" && bash scripts/setup_flavors.sh "$appName" "$package" "$packageDev" "$packageStaging"
 if [[ "$?" == "0" ]]; then
   bash scripts/cleanup.sh
   flutter pub upgrade --major-versions

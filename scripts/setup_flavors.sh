@@ -1,8 +1,8 @@
 appName="$1"
 packageId="$2"
+devId="$3"
+stagingId="$4"
 
-stagingId="${packageId}.staging"
-devId="${packageId}.dev"
 
 echo "Setting up flavors..."
 cat scripts/pubspec.yaml | sed "s/\${APP_NAME}/$appName/g" | sed "s/\${ID_DEV}/$devId/g" | sed "s/\${ID_STAGING}/$stagingId/g" | sed "s/\${ID_PROD}/$packageId/g" > scripts/tmp.yaml
