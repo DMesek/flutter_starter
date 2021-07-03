@@ -17,9 +17,9 @@ abstract class EnvInfo {
 
 extension _EnvProperties on AppEnvironment {
   static const _appTitles = {
-    AppEnvironment.DEV: 'APP_NAME Dev',
-    AppEnvironment.PROD: 'APP_NAME Prod',
-    AppEnvironment.STAGING: 'APP_NAME Staging',
+    AppEnvironment.DEV: 'Immomatch Dev',
+    AppEnvironment.PROD: 'Immomatch Prod',
+    AppEnvironment.STAGING: 'Immomatch Staging',
   };
 
   static const _envs = {

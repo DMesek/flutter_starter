@@ -43,8 +43,8 @@ if [[ "$?" == "0" ]]; then
   flutter pub upgrade --major-versions
   cd ios && pod repo update && cd ..
   bash scripts/configure_firebase.sh
-  rm -r scripts
   bash setup_git.sh "$remoteSSH"
+  rm -r scripts
   echo "Don't forget to setup the signing for ios"
   echo "All done :)"
 fi
