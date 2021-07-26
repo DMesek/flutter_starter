@@ -5,6 +5,7 @@
             "name": "Flutter Dev",
             "request": "launch",
             "type": "dart",
+            "preLaunchTask": "checkcov",
             "program": "lib/main/main_dev.dart",
             "args": [
                 "--flavor",
@@ -15,6 +16,7 @@
             "name": "Flutter Staging",
             "request": "launch",
             "type": "dart",
+            "preLaunchTask": "checkcov",
             "program": "lib/main/main_staging.dart",
             "args": [
                 "--flavor",
@@ -25,6 +27,7 @@
             "name": "Flutter Prod",
             "request": "launch",
             "type": "dart",
+            "preLaunchTask": "checkcov",
             "program": "lib/main/main_prod.dart",
             "args": [
                 "--flavor",

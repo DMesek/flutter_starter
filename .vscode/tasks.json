@@ -1,0 +1,9 @@
+{
+    "version": "2.0.0",
+    "tasks": [{
+        "label": "checkcov",
+        "command": "bash coverage_calc.sh --severity info --threshold 0.3",
+        "args": [],
+        "type": "shell"
+    }]
+}

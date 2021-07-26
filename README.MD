@@ -92,6 +92,10 @@ Now you can easily access the created property anywhere in your code by calling:
 final myProperty = EnvInfo.myCustomProperty
 ```
 
+### Code coverage
+
+Every time you run the app, the code coverage will be displayed in the terminal window.
+
 ## Disclaimers
 
 If firebase does not work for android or gradle throws some weird errors, replace the variables in scripts/configure_firebase.sh:

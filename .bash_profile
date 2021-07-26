@@ -14,3 +14,6 @@ alias gitrb="git rebase --interactive development"
 alias rundev="flutter run --flavor dev"
 alias runstag="flutter run --flavor staging"
 alias runprod="flutter run --flavor prod"
+
+#Coverage utils
+alias checkcov="bash coverage_calc.sh --severity info --threshold 0.3"
